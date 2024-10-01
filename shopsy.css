@@ -1,0 +1,368 @@
+    /* General Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #f3f3f3, #d1d1d1, #b0b0b0);
+        color: #333;
+        transition: background-color 0.5s ease, background 0.5s ease;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #ff4081;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #333, #222, #000);
+        color: white;
+        padding: 15px 50px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s;
+    }
+
+    .logo {
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: 600;
+        color: #ff4081;
+        transition: color 0.3s;
+    }
+
+    .logo:hover {
+        color: #fff;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav ul li a {
+        color: white;
+        padding: 5px 10px;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: linear-gradient(135deg, #ff4081, #d1356f);
+        color: white;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(255, 64, 129, 0.8);
+    }
+
+    /* Toggle Button */
+    .toggle-button {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .toggle-button div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(135deg, #333, #444, #555);
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        animation: dropdownFadeIn 0.3s ease forwards;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    @keyframes dropdownFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li {
+        margin-bottom: 5px;
+    }
+
+    .dropdown-menu li a {
+        color: #fff;
+        padding: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-menu li a:hover {
+        background: linear-gradient(135deg, #ff4081, #d1356f);
+        border-radius: 4px;
+    }
+
+    .search {
+        display: flex;
+        gap: 5px;
+    }
+
+    .search input {
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    .search input:focus {
+        border-color: #ff4081;
+    }
+
+    .search button {
+        padding: 5px 10px;
+        background: linear-gradient(135deg, #ff4081, #d1356f);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .search button:hover {
+        background-color: #e33d6b;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #ff4081, #6e3f51, #594047);
+        color: white;
+        animation: fadeIn 2s;
+    }
+
+    .hero h1 {
+        font-family: Lato;
+        font-size: 48px;
+        margin: 0;
+        animation: slideIn 1.5s ease-out forwards;
+    }
+
+    .hero p {
+         font-family: Lato;
+        font-size: 18px;
+        animation: slideIn 1.8s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Product Sections */
+    .product-section {
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #fff, #f8f8f8, #f0f0f0);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    .product-section:hover {
+        transform: scale(1.02);
+    }
+
+    .product-card {
+        flex: 1 1 calc(25% - 40px);
+        margin: 10px;
+        padding: 15px;
+        background: linear-gradient(135deg, #f9f9f9, #f4f4f4, #fff);
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+    }
+
+    .product-card:nth-child(odd) {
+        animation-delay: 0.2s;
+    }
+
+    .product-card:nth-child(even) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #e0e0e0, #d4d4d4, #fff);
+    }
+
+    .product-card img {
+        max-width: 100%;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card img:hover {
+        transform: scale(1.1);
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .product-card p {
+        font-size: 16px;
+        color: #777;
+    }
+
+    .product-card button {
+        padding: 5px 10px;
+        background: linear-gradient(135deg, #ff4081, #d1356f);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        animation: pulse 1.5s infinite;
+    }
+
+    .product-card button:hover {
+        background-color: #e33d6b;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Footer */
+    .footer-links {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #333, #3a3a3a, #444);
+        color: white;
+        transition: background-color 0.3s;
+    }
+
+    .footer-links p {
+        margin: 5px 0;
+    }
+
+    .footer-links a {
+        color: #ff4081;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .product-card {
+            flex: 1 1 calc(50% - 20px);
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #333, #222, #000);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .toggle-button {
+            display: flex;
+        }
+
+        nav ul.show {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .product-card {
+            flex: 1 1 100%;
+        }
+    }

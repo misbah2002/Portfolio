@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cheerful font */
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e6e0f8, #f2e6ff); /* Soft lavender gradient */
+}
+
+.navbar {
+    background-color: #5f5c91; /* Cheerful pista-like color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out; /* Animation for navbar */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 30px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #f5c89f; /* Light cheerful color on hover */
+    color: #333;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button span {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    color: #5f5c91;
+    text-align: center;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite; /* Bouncing animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+header p {
+    text-align: center;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #f5c89f;
+}
+
+button {
+    background-color: #5f5c91;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.4s, transform 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 60px;
+    background-color: #333;
+    color: white;
+    /* margin-top: 20px; */
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #5f5c91;
+        width: 100%;
+        z-index: 100;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        animation: slideIn 0.3s ease;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}

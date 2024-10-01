@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <title>My Resume</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+        <div class="toggle-button" id="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="resume-container">
+        <h1>My Work Portfolio</h1>
+        <p>Explore some of the projects I have worked on. Click on the images to view them in detail.</p>
+
+        <div class="gallery">
+            <div class="project">
+                <a href="https://harmonious-trifle-5df172.netlify.app" target="_blank">
+                    <img src="harmonius.png" alt="Project 2 Screenshot">
+                    <div class="project-info">
+                        <h2>My Firstever Portfolio</h2>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="todo.html" target="_blank">
+                    <img src="todo.png" alt="Project 1 Screenshot">
+                    <div class="project-info">
+                        <h2>My First Project is this TODO LIST</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a href="shop.html" target="_blank">
+                    <img src="shop.png" alt="Project 2 Screenshot">
+                    <div class="project-info">
+                        <h2>This Is My Final Project</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="project">
+                <a href="index.html" target="_blank">
+                    <img src="portfolio.png" alt="Project 2 Screenshot">
+                    <div class="project-info">
+                        <h2>And Ofcourse This Is My New Portfolio</h2>
+                    </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Mohammed Misbah</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <nav>
+        <div class="toggle" id="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar">
+            <a href="#Home">Home</a>
+            <a href="index.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </nav>
+    
+    <div class="resume-container">
+        <header>
+            <h1>Mohammed Misbah</h1>
+            <p>Frontend Developer | UX Designer | Web Developer</p>
+            <a href="Mohammed Misbah ullah.pdf" target="_blank" class="download-cv">Download PDF</a>
+        </header>
+
+        <section class="resume-section" id="Profile">
+            <h2>Profile</h2>
+            <p>Hello! I'm Mohammed Misbah, a passionate and dedicated interface designer and developer based in India. With a degree in Computer Applications, I have honed my skills in HTML, CSS, and JavaScript, which enables me to create visually appealing and user-friendly web interfaces.
+                Throughout my journey, I have gained practical experience as a Customer Executive, where I developed strong problem-solving skills and the ability to communicate effectively with clients. This role allowed me to appreciate the importance of understanding user needs and delivering solutions that enhance user experience.
+                I am particularly interested in front-end development, where I can blend creativity with technical expertise to build dynamic and engaging websites. My projects reflect my commitment to quality and attention to detail, and I take pride in my ability to adapt to new challenges and work collaboratively within a team.
+                I am currently seeking an entry-level opportunity where I can apply my skills in a dynamic organization that values innovation and growth. I am eager to contribute to exciting projects, learn from experienced professionals, and continue to expand my knowledge in the field of web development.
+                In my free time, I enjoy exploring new technologies and trends in design, which fuels my creativity and keeps my work fresh and relevant. I believe that the intersection of technology and design is where the most impactful user experiences are created.</p>
+        </section>
+
+        <section class="resume-section" id="Education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p>Voorhees College, affiliated to Thruvallur University, 2022</p>
+            </div>
+            <div class="education-item">
+                <h3>Higher Secondary (12th Grade)</h3>
+                <p>Muslim High School, 2019</p>
+            </div>
+            <div class="education-item">
+                <h3>Secondary Level Certificate (SLC)</h3>
+                <p>Muslim High School, 2017</p>
+            </div>
+        </section>
+
+        <section class="resume-section" id="Experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Customer Executive - Axis Bank Process</h3>
+                <p>Cogent Company, 6 months experience</p>
+                <ul>
+                    <li>Handled customer queries effectively</li>
+                    <li>Successfully pitched sales and upgraded credit cards</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section" id="Skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML, CSS, JavaScript, SQL, Java</li>
+                <li>Responsive Web Design</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </section>
+
+        <section class="resume-section" id="Projects">
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li><a href="https://harmonious-trifle-5df172.netlify.app/" target="_blank">Project 1: My First Portfolio</a></li>
+                <li><a href="todo.html" target="_blank">Project 2: BUCKET LIST</a></li>
+                <li><a href="index.html" target="_blank">Project 3: My Portfolio itself</a></li>
+            </ul>
+        </section>
+
+        <section class="resume-section" id="Contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>Email: mohammedullah944@gmail.com</p>
+                <p>Phone: +91 7092440739</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        const toggleButton = document.querySelector('.toggle');
+        const navbar = document.querySelector('.navbar');
+    
+        toggleButton.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+</html>
